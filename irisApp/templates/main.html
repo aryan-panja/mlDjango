@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iris Application</title>
+</head>
+<body>
+    <h1>Iris Django App</h1>
+
+    <div>
+        <form method="post">
+            {% csrf_token %}
+            Sepal Length: <input type="text" name="sepal_length"><br><hr>
+            Sepal Width: <input type="text" name="sepal_width"><br><hr>
+            Petal Length: <input type="text" name="petal_length"><br><hr>
+            Petal Width: <input type="text" name="petal_width"><br><hr>
+            <input type="submit" value="Submit">
+        </form>
+        <h2>
+            The Prediction is: {{ y_pred }}
+        </h2>
+    </div>
+</body>
+</html>
